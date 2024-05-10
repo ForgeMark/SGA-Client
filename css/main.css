@@ -1,0 +1,167 @@
+/* Import a futuristic font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  background: #1b1e24; /* Dark background color */ 
+}
+
+body {
+  display:flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  color:white;
+  gap: 4vh;
+}
+
+#gate {
+  width: 90vw;
+  aspect-ratio: 1/1;
+  max-width: 60vh;
+  margin-top: 5vh;
+}
+
+/* Bluetooth connection prompt */
+#bluetooth-prompt{
+  position: fixed;
+  z-index: 5;
+  transition: margin-top 0.5s ease-in-out;
+}
+#bluetooth-prompt button{
+  border-radius: 0 0 5px 5px;
+}
+#bluetooth-prompt.hide{
+  margin-top: -50px;
+}
+
+.glow{
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.5); /* Purple glow */
+  background: #2a2d3a; /* Dark shade with a hint of blue */
+}
+
+/* Stargate Interface styling */
+#stargate-interface {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
+#stargate-interface button{
+  width:80%;
+}
+
+#audio-sync-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.8em;
+  gap: 1vh;
+}
+
+#notification-bar {
+  height:10vh;
+  width:80%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.lefthalf {
+  justify-content: left;
+  display: flex;
+  align-items: center;
+  height:100%;
+  width:50%;
+}
+
+.righthalf {
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  height:100%;
+  width:50%;
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(145deg, #6e00ff, #a74dff); /* Purple gradient */
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:disabled,
+button[disabled]{
+  background: #666666;
+}
+
+button:hover::after {
+  opacity: 0; /* Subtle hover effect */
+}
+
+button:enabled:active {
+  transform: scale(0.95); /* Click effect */
+}
+
+/* Advanced Options Menu */
+#advanced-options {
+  background: #242731; /* Slightly lighter background for contrast */
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 10px rgba(128, 0, 128, 0.5);
+}
+
+/* Checkbox label styling */
+#advanced-options label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+/* Custom styled checkboxes */
+#advanced-options input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #35394a;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(128, 0, 128, 0.5);
+}
+
+#advanced-options input[type="checkbox"]:checked {
+  background-color: #6e00ff;
+}
+
+#advanced-options input[type="checkbox"]:checked::after {
+  content: '\2713';
+  color: #fff;
+  position: absolute;
+  left: 4px;
+  top: 2px;
+}

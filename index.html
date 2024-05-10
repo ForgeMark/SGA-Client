@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stargate Atlantis model interface</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/gate.css">
+</head>
+
+<body>
+
+<!-- Bluetooth Connection Prompt -->
+<div id="bluetooth-prompt" class="glow">
+	<button id="connect-bluetooth" onclick="connectToDevice();">Connect via Bluetooth</button>
+</div>
+
+<!-- Stargate -->
+<div id="gate">
+	<div class="sg-border">
+		<div class="arrow arrow1"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow2"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow3"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow4"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow5"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow6"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow7"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow8"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div class="arrow arrow9"><svg height="100%" width="100%" viewBox="0 0 50 25"><path d="M25 25 L0 0 L50 0 Z"/></svg></div>
+		<div id="stargate">
+			<div class="wormhole">
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/AtlantisGlyph31.svg"/><!--0-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/0/08/AtlantisGlyph12.svg"/><!--1-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/1/19/AtlantisGlyph03.svg"/><!--2-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/AtlantisGlyph24.svg"/><!--3-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/AtlantisGlyph22.svg"/><!--4-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/AtlantisGlyph27.svg"/><!--5-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/AtlantisGlyph19.svg"/><!--6-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/4/46/AtlantisGlyph26.svg"/><!--7-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/7/74/AtlantisGlyph36.svg"/><!--8-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/6/69/AtlantisGlyph04.svg"/><!--9-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/AtlantisGlyph16.svg"/><!--10-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/AtlantisGlyph17.svg"/><!--11-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/5/53/AtlantisGlyph09.svg"/><!--12-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/9/90/AtlantisGlyph29.svg"/><!--13-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/AtlantisGlyph35.svg"/><!--14-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/AtlantisGlyph14.svg"/><!--15-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/AtlantisGlyph32.svg"/><!--16-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/3/37/AtlantisGlyph06.svg"/><!--17-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/AtlantisGlyph01.svg"/><!--18-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/AtlantisGlyph23.svg"/><!--19-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/AtlantisGlyph07.svg"/><!--20-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/AtlantisGlyph30.svg"/><!--21-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/AtlantisGlyph25.svg"/><!--22-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/AtlantisGlyph13.svg"/><!--23-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/AtlantisGlyph21.svg"/><!--24-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/7/70/AtlantisGlyph18.svg"/><!--25-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/AtlantisGlyph08.svg"/><!--26-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/1/16/AtlantisGlyph10.svg"/><!--27-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/0/00/AtlantisGlyph15.svg"/><!--28-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/5/59/AtlantisGlyph05.svg"/><!--29-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/AtlantisGlyph34.svg"/><!--30-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/AtlantisGlyph02.svg"/><!--31-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/AtlantisGlyph28.svg"/><!--32-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/4/40/AtlantisGlyph33.svg"/><!--33-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/2/23/AtlantisGlyph20.svg"/><!--34-->
+				<img class="chevron" src="https://upload.wikimedia.org/wikipedia/commons/9/94/AtlantisGlyph11.svg"/><!--35-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Stargate Interface, hidden until Bluetooth is connected -->
+<div id="stargate-interface" class="glow">
+
+	<div id="notification-bar">
+
+		<div class="lefthalf">
+			<div id="status">Disconnected.</div>
+		</div>
+
+		<div class="righthalf">
+			<svg id="bluetooth-indicator" fill="grey" height="40%" viewBox="0 0 217.499 217.499" xml:space="preserve">
+				<path d="M123.264,108.749l45.597-44.488c1.736-1.693,2.715-4.016,2.715-6.441s-0.979-4.748-2.715-6.441l-50.038-48.82
+					c-2.591-2.528-6.444-3.255-9.78-1.853c-3.336,1.406-5.505,4.674-5.505,8.294v80.504l-42.331-41.3
+					c-3.558-3.471-9.255-3.402-12.727,0.156c-3.471,3.558-3.401,9.256,0.157,12.727l48.851,47.663l-48.851,47.663
+					c-3.558,3.471-3.628,9.169-0.157,12.727s9.17,3.628,12.727,0.156l42.331-41.3v80.504c0,3.62,2.169,6.888,5.505,8.294
+					c1.128,0.476,2.315,0.706,3.493,0.706c2.305,0,4.572-0.886,6.287-2.559l50.038-48.82c1.736-1.693,2.715-4.016,2.715-6.441
+					s-0.979-4.748-2.715-6.441L123.264,108.749z M121.539,30.354l28.15,27.465l-28.15,27.465V30.354z M121.539,187.143v-54.93
+					l28.15,27.465L121.539,187.143z"/>
+			</svg>
+		</div>
+		
+	</div>
+	
+	<!-- Dialing Buttons -->
+	<button onclick="run('dialout');">Dial Gate</button>
+	<button onclick="run('incoming');">Incoming Wormhole</button>
+	<button onclick="run('close');">Close Gate</button>
+	<div id="audio-sync-container">
+		<p>Audio sync</p>
+		<input type="range" id="audioShiftSlider" min="0" max="500" value="0" oninput="audioShiftSliderAmount.value=audioShiftSlider.value;" onchange="setDelayToGate(this.value);">                                                       
+		<output id="audioShiftSliderAmount" name="amount" for="rangeInput">0</output>
+	</div>
+	
+	<!-- Advanced Options Menu -->
+	<div id="advanced-options">
+		<label><input type="checkbox" id="aom-shield"> Optional Shield Activation</label>
+		<label><input type="checkbox" id="aom-st-dialout"> Play Theme on Dialout</label>
+		<label><input type="checkbox" id="aom-alarm-incoming"> Play Alarm for Incoming Wormhole</label>
+	</div>
+</div>
+
+
+
+<!-- AUDIO -->
+<div>
+	<audio id="audio_dhdpress">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/dhd/atlantis/press.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_roll">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/atlantis/roll.wav" type="audio/wav" preload="auto">
+	</audio>
+
+	<audio id="audio_inchev">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/atlantis/chevron_incoming.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_outchev">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/atlantis/chevron.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_opengate">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/atlantis/open.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_openfail">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/atlantis/fail.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_closegate">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/close.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_puddle">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/wormhole_loop.wav" type="audio/wav" preload="auto">
+	</audio>
+
+	<audio id="audio_alarm">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/alarm/sga_offworld-alarm.wav" type="audio/wav" preload="auto">
+	</audio>
+
+	<audio id="audio_shieldloop">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/shield/idle_loop.wav" type="audio/wav" preload="auto">
+	</audio>
+
+	<audio id="audio_shieldactivate">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/shield/close.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_shielddeactivate">
+		<source src="https://raw.githubusercontent.com/RafaelDeJongh/cap_resources/master/sound/stargate/shield/open.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	<audio id="audio_soundtrack_main">
+		<source src="https://ia800900.us.archive.org/8/items/tvtunes_1120/Stargate%20Atlantis.mp3" type="audio/mp3" preload="auto">
+	</audio>
+</div>
+
+<script src="js/gate.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
