@@ -68,9 +68,6 @@ function setupMainCharacteristicNotifications(characteristic) {
             else if (decodedValue === "open" || decodedValue === "dial-open") {
                 openGate();
             }
-            else if (decodedValue === "dialout") {
-                dial();
-            }
             else if (decodedValue === "incoming") {
                 incoming();
             }
@@ -85,6 +82,9 @@ function setupMainCharacteristicNotifications(characteristic) {
             }
             else if (decodedValue === "dial-fail") {
                 dialFail();
+            }
+            else if (decodedValue === "dialout") {
+                
             }
             else
             {
@@ -445,19 +445,6 @@ function incoming()
     if(elements.aom.shield.checked)
         setTimeout(()=>{run("shieldon");}, 2000);
     setTimeout(()=>{stopRoll();clearInterval(chevint);stargate.enableWormHole();playOpenGate();playPuddle();},5420);
-}
-
-async function dial()
-{
-    await dialSingleChevron(1);
-    await dialSingleChevron(2);    
-    await dialSingleChevron(3);
-    await dialSingleChevron(4);
-    await dialSingleChevron(5);
-    await dialSingleChevron(6);
-    await dialSingleChevron(7);
-
-    openGate();
 }
 
 async function dialSingleChevron(chn)
